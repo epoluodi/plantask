@@ -30,8 +30,8 @@ public class Common {
 
 
     public final static Object olock = new Object();
-    public static String ServerIP;
-    public static String ServerWCF;
+
+    public static String ServerWCF ="http://epoluodi.vicp.cc:9229";
     public static Context Appcontext;
     //popwindows方法
     static PopupWindow popupWindow;

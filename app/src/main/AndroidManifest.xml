@@ -28,7 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DetailList"></activity>
+        <activity android:name=".DetailList" />
     </application>
 
 </manifest>

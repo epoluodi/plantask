@@ -16,14 +16,25 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"
+
         android:id="@+id/title"
         />
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:id="@+id/list"
         android:layout_marginTop="10dp"
         style="@style/List"
+        android:layout_weight="1"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="刷新"
+        android:id="@+id/btnrefresh"
+
         />
 </LinearLayout>
