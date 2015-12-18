@@ -66,7 +66,7 @@ public class MainActivity extends Activity {
         thread.start();
 
 
-        Toast.makeText(this,"Hello world",Toast.LENGTH_SHORT).show();
+
 
     }
 

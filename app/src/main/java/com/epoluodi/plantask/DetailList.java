@@ -248,6 +248,8 @@ public class DetailList extends Activity {
             myAdapter = new MyAdapter(this,lists.get(i));
             listView.setAdapter(myAdapter);
             viewList.add(view);
+            Map<String,String> map = lists.get(i).get(0);
+            dtbh.setText(map.get("dtbh"));
         }
 
 
@@ -271,7 +273,7 @@ public class DetailList extends Activity {
         @Override
         public void onPageSelected(int i) {
             viewpager=i;
-            Map<String,String> map = lists.get(i).get(i);
+            Map<String,String> map = lists.get(i).get(0);
             dtbh.setText(map.get("dtbh"));
 
 
@@ -331,7 +333,7 @@ public class DetailList extends Activity {
             switch (i)
             {
                 case 0:
-                    map = mapList.get(viewpager);
+                    map = mapList.get(0);
                     title.setText("一月");
                     if (map.get("11").equals("1"))
                         imageView1.setBackground(getResources().getDrawable(R.mipmap.ok));
@@ -344,7 +346,7 @@ public class DetailList extends Activity {
 
                     break;
                 case 1:
-                    map = mapList.get(viewpager);
+                    map = mapList.get(0);
                     title.setText("二月");
                     if (map.get("21").equals("1"))
                         imageView1.setBackground(getResources().getDrawable(R.mipmap.ok));
@@ -357,7 +359,7 @@ public class DetailList extends Activity {
 
                     break;
                 case 2:
-                    map = mapList.get(viewpager);
+                    map = mapList.get(0);
                     title.setText("三月");
                     if (map.get("31").equals("1"))
                         imageView1.setBackground(getResources().getDrawable(R.mipmap.ok));
@@ -370,7 +372,7 @@ public class DetailList extends Activity {
 
                     break;
                 case 3:
-                    map = mapList.get(viewpager);
+                    map = mapList.get(0);
                     title.setText("四月");
                     if (map.get("41").equals("1"))
                         imageView1.setBackground(getResources().getDrawable(R.mipmap.ok));
@@ -383,7 +385,7 @@ public class DetailList extends Activity {
 
                     break;
                 case 4:
-                    map = mapList.get(viewpager);
+                    map = mapList.get(0);
                     title.setText("五月");
                     if (map.get("51").equals("1"))
                         imageView1.setBackground(getResources().getDrawable(R.mipmap.ok));
@@ -396,7 +398,7 @@ public class DetailList extends Activity {
 
                     break;
                 case 5:
-                    map = mapList.get(viewpager);
+                    map = mapList.get(0);
                     title.setText("六月");
                     if (map.get("61").equals("1"))
                         imageView1.setBackground(getResources().getDrawable(R.mipmap.ok));
@@ -409,7 +411,7 @@ public class DetailList extends Activity {
 
                     break;
                 case 6:
-                    map = mapList.get(viewpager);
+                    map = mapList.get(0);
                     title.setText("七月");
                     if (map.get("71").equals("1"))
                         imageView1.setBackground(getResources().getDrawable(R.mipmap.ok));
@@ -422,7 +424,7 @@ public class DetailList extends Activity {
 
                     break;
                 case 7:
-                    map = mapList.get(viewpager);
+                    map = mapList.get(0);
                     title.setText("八月");
                     if (map.get("81").equals("1"))
                         imageView1.setBackground(getResources().getDrawable(R.mipmap.ok));
@@ -435,7 +437,7 @@ public class DetailList extends Activity {
 
                     break;
                 case 8:
-                    map = mapList.get(viewpager);
+                    map = mapList.get(0);
                     title.setText("九月");
                     if (map.get("91").equals("1"))
                         imageView1.setBackground(getResources().getDrawable(R.mipmap.ok));
@@ -448,7 +450,7 @@ public class DetailList extends Activity {
 
                     break;
                 case 9:
-                    map = mapList.get(viewpager);
+                    map = mapList.get(0);
                     title.setText("十月");
                     if (map.get("101").equals("1"))
                         imageView1.setBackground(getResources().getDrawable(R.mipmap.ok));
@@ -461,7 +463,7 @@ public class DetailList extends Activity {
 
                     break;
                 case 10:
-                    map = mapList.get(viewpager);
+                    map = mapList.get(0);
                     title.setText("十一月");
                     if (map.get("111").equals("1"))
                         imageView1.setBackground(getResources().getDrawable(R.mipmap.ok));
@@ -474,7 +476,7 @@ public class DetailList extends Activity {
 
                     break;
                 case 11:
-                    map = mapList.get(viewpager);
+                    map = mapList.get(0);
                     title.setText("十二月");
                     if (map.get("121").equals("1"))
                         imageView1.setBackground(getResources().getDrawable(R.mipmap.ok));
