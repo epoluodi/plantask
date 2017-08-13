@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context="com.epoluodi.plantask.WQActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="外勤助手"
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:id="@+id/t1"
+        />
+
+    <View
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="1.5px"
+        android:background="@color/blackTransparent2"
+        android:layout_below="@+id/t1"
+        android:id="@+id/v1"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="姓名"
+        android:layout_below="@+id/v1"
+        android:textColor="@color/blackTransparent4"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/t2"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/blackTransparent1"
+        android:hint="输入操作姓名"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/t2"
+        android:id="@+id/name"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="目的地"
+        android:layout_below="@+id/name"
+        android:textColor="@color/blackTransparent4"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/t3"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blackTransparent1"
+        android:hint="自动获取定位信息..."
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColorHint="@color/green1"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/t3"
+        android:enabled="false"
+        android:id="@+id/txtgps"
+
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="事由"
+        android:layout_below="@+id/txtgps"
+        android:textColor="@color/blackTransparent4"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/t4"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blackTransparent1"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="start"
+        android:hint="输入事由说明"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/t4"
+        android:inputType="none"
+        android:id="@+id/memo"
+        />
+    <TextView
+        android:layout_below="@+id/memo"
+        android:padding="10dp"
+        android:textColor="@color/blackTransparent6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="说明:\n\n 外勤人员，请真实填写信息，并且提交，APP自动获取当前位置信息，如当前为位置信息无法获得，则无法提交。"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提交"
+        android:id="@+id/btnsubmit"
+        android:layout_alignParentBottom="true"
+
+
+        />
+
+</RelativeLayout>

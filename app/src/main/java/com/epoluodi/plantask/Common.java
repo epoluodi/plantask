@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.epoluodi.plantask.R;
 
-import org.apache.http.util.EncodingUtils;
+
 import org.json.JSONObject;
 
 import java.io.File;
@@ -30,8 +30,8 @@ public class Common {
 
 
     public final static Object olock = new Object();
-
-    public static String ServerWCF ="http://epoluodi.vicp.cc:9229";
+//"http://192.168.0.10:9229/"
+    public static String ServerWCF ="http://vc1818.88ip.org:9229/";
     public static Context Appcontext;
     //popwindows方法
     static PopupWindow popupWindow;
@@ -40,27 +40,27 @@ public class Common {
     public static String projectcode="";
 
 
-    public static String GetconfigServer()
-    {
-        try {
-            File file = new File(Environment.getExternalStorageDirectory()+"/zhongyuan/config.json");
-            if (!file.exists())
-                return "";
-            FileInputStream fileInputStream = new FileInputStream(file);
-            byte[] buffer = new byte[fileInputStream.available()];
-            fileInputStream.read(buffer);
-            fileInputStream.close();
-            String strbuffer = EncodingUtils.getString(buffer, "UTF-8");
-
-            JSONObject jsonObject = new JSONObject(strbuffer);
-            return jsonObject.get("server").toString();
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-            return "";
-        }
-    }
+//    public static String GetconfigServer()
+//    {
+//        try {
+//            File file = new File(Environment.getExternalStorageDirectory()+"/zhongyuan/config.json");
+//            if (!file.exists())
+//                return "";
+//            FileInputStream fileInputStream = new FileInputStream(file);
+//            byte[] buffer = new byte[fileInputStream.available()];
+//            fileInputStream.read(buffer);
+//            fileInputStream.close();
+//            String strbuffer = EncodingUtils.getString(buffer, "UTF-8");
+//
+//            JSONObject jsonObject = new JSONObject(strbuffer);
+//            return jsonObject.get("server").toString();
+//        }
+//        catch (Exception e)
+//        {
+//            e.printStackTrace();
+//            return "";
+//        }
+//    }
 
 
     //显示popwindows
@@ -70,7 +70,7 @@ public class Common {
         popview = inflater.inflate(R.layout.popwindows, null);
 
         ((TextView) popview.findViewById(R.id.poptext)).setText(text);
-        popupWindow = new PopupWindow(popview, 330, 120);
+        popupWindow = new PopupWindow(popview, 330, 290);
         popupWindow.setOutsideTouchable(false);
         popupWindow.setFocusable(true);
         popupWindow.setAnimationStyle(R.style.Animationpopwindows);

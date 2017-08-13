@@ -118,7 +118,8 @@ public class DetailList extends Activity {
                     viewList.clear();
                     MakeJosn(msg.obj.toString());
                     initviewpaher();
-
+                    Map<String,String> map = lists.get(0).get(0);
+                    dtbh.setText(map.get("dtbh"));
 
 
                     break;
