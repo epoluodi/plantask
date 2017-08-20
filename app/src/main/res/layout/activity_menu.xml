@@ -21,9 +21,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_below="@+id/t1"
+        android:id="@+id/l1"
+
         android:orientation="horizontal">
 
         <RelativeLayout
@@ -65,6 +67,7 @@
             android:layout_gravity="center_horizontal"
             android:clickable="true"
             android:id="@+id/menu2"
+
             >
             <ImageView
                 android:padding="8dp"
@@ -88,7 +91,143 @@
         </RelativeLayout>
 
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:clickable="true"
+            android:id="@+id/menu3"
+            >
+            <ImageView
+                android:padding="8dp"
+
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/img3"
+
+                android:src="@drawable/menu3" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img3"
+                android:text="电梯巡检管理"
+                android:textColor="@color/black"
+
+                />
+
+        </RelativeLayout>
+
+
+
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/l1"
+        android:id="@+id/l2"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+
+            android:id="@+id/menu4"
+
+            android:layout_gravity="center_horizontal"
+            >
+            <ImageView
+                android:padding="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/img4"
+
+                android:src="@drawable/menu4" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img4"
+                android:text="维保单上传查询"
+                android:textColor="@color/black"
+
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:id="@+id/menu5"
+            >
+            <ImageView
+                android:padding="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/img5"
+
+                android:src="@drawable/menu5" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img5"
+                android:text="维保单下载"
+                android:textColor="@color/black"
+
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:id="@+id/menu6"
+            >
+            <ImageView
+                android:padding="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/img6"
+
+                android:src="@drawable/menu6" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img6"
+                android:text="员工登录"
+                android:textColor="@color/black"
+
+                />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
 
 </RelativeLayout>

@@ -37,7 +37,7 @@ public class WQActivity extends Activity {
         memo = (EditText) findViewById(R.id.memo);
         btnsubmit = (Button) findViewById(R.id.btnsubmit);
         btnsubmit.setEnabled(false);
-
+        name.setText(Common.userName);
         btnsubmit.setOnClickListener(onClickListener);
 
     }

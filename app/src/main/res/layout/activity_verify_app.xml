@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context="com.epoluodi.plantask.VerifyAppActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="验证员工信息"
+        android:textAlignment="center"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="28dp"
+        android:id="@+id/t1"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/blackTransparent1"
+        android:hint="请输入验证码"
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        android:textAlignment="center"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/t1"
+        android:id="@+id/code"
+        android:maxLength="4"
+        />
+
+    <TextView
+        android:layout_below="@+id/code"
+        android:padding="10dp"
+        android:textColor="@color/blackTransparent6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="说明:\n\n 员工第一次使用APP时，输入验证码，验证手机身份后，绑定该手机信息，"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:id="@+id/btnsubmit"
+        android:layout_alignParentBottom="true"
+
+
+        />
+
+</RelativeLayout>

@@ -29,6 +29,11 @@ public class Common {
 //    com.android.server.scannerservice.broadcast
 
 
+    public static String userName;
+    public static String workId;
+
+    public static String deviceId=android.os.Build.SERIAL;
+
     public final static Object olock = new Object();
 //"http://192.168.0.10:9229/"
     public static String ServerWCF ="http://vc1818.88ip.org:9229/";

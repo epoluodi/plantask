@@ -47,6 +47,7 @@
         android:paddingLeft="10dp"
         android:layout_below="@+id/t2"
         android:id="@+id/name"
+        android:enabled="false"
         />
 
     <TextView
