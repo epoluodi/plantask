@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.ksoap2.serialization.PropertyInfo;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -89,7 +90,12 @@ public class MainActivity extends Activity {
         public void run() {
             Isrun=true;
             Webservice webservice = new Webservice(Common.ServerWCF,15000);
-            String r =webservice.PDA_GetInterFaceForStringNew(null,"A_PDA_getplantask");
+            PropertyInfo[] propertyInfos=new PropertyInfo[1];
+            PropertyInfo propertyInfo = new PropertyInfo();
+            propertyInfo.setName("fzr");
+            propertyInfo.setValue(Common.userName);
+            propertyInfos[0] = propertyInfo;
+            String r =webservice.PDA_GetInterFaceForStringNew(propertyInfos,"A_PDA_getplantask");
             Log.d("结果:",r);
             if (r.equals("-1"))
             {

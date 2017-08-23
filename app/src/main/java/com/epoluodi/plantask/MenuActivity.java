@@ -1,6 +1,7 @@
 package com.epoluodi.plantask;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
 
 import android.net.Uri;
@@ -22,7 +23,8 @@ import WebService.Webservice;
 
 public class MenuActivity extends Activity {
 
-    private RelativeLayout menu1,menu2,menu3,menu4,menu5,menu6;
+    private RelativeLayout menu1,menu2,menu3,menu4,menu5,menu6
+            ,menu7,menu8,menu9;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +37,9 @@ public class MenuActivity extends Activity {
         menu4 = (RelativeLayout)findViewById(R.id.menu4);
         menu5 = (RelativeLayout)findViewById(R.id.menu5);
         menu6 = (RelativeLayout)findViewById(R.id.menu6);
+        menu7 = (RelativeLayout)findViewById(R.id.menu7);
+        menu8 = (RelativeLayout)findViewById(R.id.menu8);
+        menu9 = (RelativeLayout)findViewById(R.id.menu9);
 
         menu1.setOnClickListener(onClickListener);
         menu2.setOnClickListener(onClickListener);
@@ -43,7 +48,9 @@ public class MenuActivity extends Activity {
         menu4.setOnClickListener(onClickListener);
         menu5.setOnClickListener(onClickListener);
         menu6.setOnClickListener(onClickListener);
-
+        menu7.setOnClickListener(onClickListener);
+        menu8.setOnClickListener(onClickListener);
+        menu9.setOnClickListener(onClickListener);
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -142,22 +149,18 @@ public class MenuActivity extends Activity {
                     intent = new Intent(MenuActivity.this,WQActivity.class);
                     break;
                 case R.id.menu3:
-//                    intent = new Intent(MenuActivity.this,WebActivity.class);
-//                    intent.putExtra("url","http://vc1818.88ip.org:8091/");
+
 
                     uri = Uri.parse("http://vc1818.88ip.org:8091/");
                     intent = new Intent(Intent.ACTION_VIEW, uri);
                     break;
                 case R.id.menu4:
-//                    intent = new Intent(MenuActivity.this,WebActivity.class);
-//                    intent.putExtra("url","http://vc1818.88ip.org:8091/H5/record");
+
 
                     uri = Uri.parse("http://vc1818.88ip.org:8091/H5/record");
                     intent = new Intent(Intent.ACTION_VIEW, uri);
                     break;
                 case R.id.menu5:
-//                    intent = new Intent(MenuActivity.this,WebActivity.class);
-//                    intent.putExtra("url","http://vc1818.88ip.org:666/");
 
                     uri = Uri.parse("http://vc1818.88ip.org:666/");
                     intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -165,12 +168,52 @@ public class MenuActivity extends Activity {
 
                     break;
                 case R.id.menu6:
-//                    intent = new Intent(MenuActivity.this,WebActivity.class);
-//                    intent.putExtra("url","http://vc1818.88ip.org:888/");
-
+//
 
                     uri = Uri.parse("http://vc1818.88ip.org:888/");
                     intent = new Intent(Intent.ACTION_VIEW, uri);
+                    break;
+                case R.id.menu7:
+
+
+                    uri = Uri.parse("http://vc1818.88ip.org:8091/gpsData/viewBaiduMap");
+                    intent = new Intent(Intent.ACTION_VIEW, uri);
+                    break;
+                case R.id.menu8:
+
+                    if (!Common.workId.contains("M"))
+                    {
+                        Toast.makeText(MenuActivity.this,"你没有权限打开",Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    intent = getPackageManager().getLaunchIntentForPackage("com.epoluodi.signmanger");
+
+
+
+//                    ComponentName componetName = new ComponentName(
+//                            //这个是另外一个应用程序的包名
+//                            "com.epoluodi.signmanger",
+//                            //这个参数是要启动的Activity
+//                            "com.epoluodi.signmanger.MainActivity");
+//
+//                    intent= new Intent();
+//
+//                    intent.setComponent(componetName);
+
+                    break;
+                case R.id.menu9:
+
+
+
+                    intent = getPackageManager().getLaunchIntentForPackage("com.apollo.gps_server");
+                    if (intent == null) {
+                        Toast.makeText(MenuActivity.this,"没有安装GPS位置管理",Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    intent.putExtra("username",Common.userName);
+
+
                     break;
             }
             startActivity(intent);
