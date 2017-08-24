@@ -319,4 +319,15 @@
     <string name="title_activity_taskfinish">雇主确认</string>
     <string name="title_activity_yingji">yingji</string>
     <string name="title_activity_uploaddata">uploaddata</string>
+
+
+    <!-- 扫描使用-->
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="viewfinder_laser2">#65B9FF</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+
 </resources>

@@ -24,7 +24,7 @@ import WebService.Webservice;
 public class MenuActivity extends Activity {
 
     private RelativeLayout menu1,menu2,menu3,menu4,menu5,menu6
-            ,menu7,menu8,menu9;
+            ,menu7,menu8,menu9,menu10;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +40,7 @@ public class MenuActivity extends Activity {
         menu7 = (RelativeLayout)findViewById(R.id.menu7);
         menu8 = (RelativeLayout)findViewById(R.id.menu8);
         menu9 = (RelativeLayout)findViewById(R.id.menu9);
+        menu10 = (RelativeLayout)findViewById(R.id.menu10);
 
         menu1.setOnClickListener(onClickListener);
         menu2.setOnClickListener(onClickListener);
@@ -51,6 +52,7 @@ public class MenuActivity extends Activity {
         menu7.setOnClickListener(onClickListener);
         menu8.setOnClickListener(onClickListener);
         menu9.setOnClickListener(onClickListener);
+        menu10.setOnClickListener(onClickListener);
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -213,6 +215,10 @@ public class MenuActivity extends Activity {
                     }
                     intent.putExtra("username",Common.userName);
 
+
+                    break;
+                case R.id.menu10:
+                    intent = new Intent(MenuActivity.this,JiXiuScanActivity.class);
 
                     break;
             }

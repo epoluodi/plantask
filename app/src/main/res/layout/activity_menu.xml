@@ -32,7 +32,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:id="@+id/l1"
 
                 android:orientation="horizontal">
@@ -139,8 +139,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:layout_below="@+id/l1"
                 android:id="@+id/l2"
                 android:orientation="horizontal">
 
@@ -242,8 +240,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:layout_below="@+id/l1"
                 android:orientation="horizontal">
 
                 <RelativeLayout
@@ -344,6 +340,58 @@
 
 
             </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+
+                    android:id="@+id/menu10"
+
+                    android:layout_gravity="center_horizontal"
+                    >
+                    <ImageView
+                        android:padding="8dp"
+
+                        android:layout_margin="8dp"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/img10"
+
+                        android:src="@drawable/menu10" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/img10"
+                        android:text="急修扫码"
+                        android:textColor="@color/black"
+
+                        />
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
         </LinearLayout>
     </ScrollView>
 

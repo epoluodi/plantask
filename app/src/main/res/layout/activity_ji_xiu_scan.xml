@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context="com.epoluodi.plantask.JiXiuScanActivity">
+
+
+    <ImageView
+        android:clickable="true"
+        android:id="@+id/btnreturn"
+        android:layout_marginTop="8dp"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/back_bar_left_selector"
+        />
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/scan_selector"
+        android:id="@+id/scanimg"
+        android:clickable="true"/>
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:id="@+id/btnsubmit"
+        android:layout_alignParentBottom="true"
+
+
+        />
+</RelativeLayout>
