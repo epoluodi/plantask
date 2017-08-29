@@ -70,7 +70,7 @@ public class VerifyAppActivity extends Activity {
                 case 1:
                     String json = (String) msg.obj;
                     Log.i("结果",json);
-                    if (json.equals("null"))
+                    if (json.equals("null")||json.equals("-1"))
                     {
                         Toast.makeText(VerifyAppActivity.this,"验证失败，请重新验证",Toast.LENGTH_SHORT).show();
 

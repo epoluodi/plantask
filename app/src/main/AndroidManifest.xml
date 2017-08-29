@@ -47,6 +47,7 @@
         <activity android:name=".VerifyAppActivity" />
         <activity android:name=".WebActivity" />
         <activity android:name=".JiXiuScanActivity"></activity>
+        <activity android:name=".Scan.ScanActivity"/>
     </application>
 
 </manifest>

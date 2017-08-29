@@ -28,6 +28,97 @@
         android:clickable="true"/>
 
 
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_below="@+id/scanimg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="救援号"
+            android:gravity="center_horizontal"
+            android:padding="3dp"
+            android:textSize="18dp"
+            android:id="@+id/t1"
+            android:textColor="@color/blackTransparent4"
+            />
+        <TextView
+            android:layout_below="@+id/t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:textSize="22dp"
+            android:id="@+id/jynum"
+            android:textColor="@color/blackTransparentA"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/r2"
+        android:layout_below="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="到达时间"
+            android:gravity="center_horizontal"
+            android:padding="3dp"
+            android:textSize="18dp"
+            android:id="@+id/t2"
+            android:textColor="@color/blackTransparent4"
+            />
+        <TextView
+            android:layout_below="@+id/t2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:textSize="22dp"
+            android:id="@+id/ddtime"
+            android:textColor="@color/blackTransparentA"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+
+        android:layout_below="@+id/r2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="报修人"
+            android:gravity="center_horizontal"
+            android:padding="3dp"
+            android:textSize="18dp"
+            android:id="@+id/t3"
+            android:textColor="@color/blackTransparent4"
+            />
+        <TextView
+            android:layout_below="@+id/t3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:textSize="22dp"
+            android:id="@+id/bxr"
+            android:textColor="@color/blackTransparentA"
+            />
+    </RelativeLayout>
 
 
     <Button

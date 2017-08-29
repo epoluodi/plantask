@@ -37,7 +37,7 @@ public class MenuActivity extends Activity {
         menu4 = (RelativeLayout)findViewById(R.id.menu4);
         menu5 = (RelativeLayout)findViewById(R.id.menu5);
         menu6 = (RelativeLayout)findViewById(R.id.menu6);
-        menu7 = (RelativeLayout)findViewById(R.id.menu7);
+//        menu7 = (RelativeLayout)findViewById(R.id.menu7);
         menu8 = (RelativeLayout)findViewById(R.id.menu8);
         menu9 = (RelativeLayout)findViewById(R.id.menu9);
         menu10 = (RelativeLayout)findViewById(R.id.menu10);
@@ -49,7 +49,7 @@ public class MenuActivity extends Activity {
         menu4.setOnClickListener(onClickListener);
         menu5.setOnClickListener(onClickListener);
         menu6.setOnClickListener(onClickListener);
-        menu7.setOnClickListener(onClickListener);
+//        menu7.setOnClickListener(onClickListener);
         menu8.setOnClickListener(onClickListener);
         menu9.setOnClickListener(onClickListener);
         menu10.setOnClickListener(onClickListener);
@@ -175,12 +175,12 @@ public class MenuActivity extends Activity {
                     uri = Uri.parse("http://vc1818.88ip.org:888/");
                     intent = new Intent(Intent.ACTION_VIEW, uri);
                     break;
-                case R.id.menu7:
-
-
-                    uri = Uri.parse("http://vc1818.88ip.org:8091/gpsData/viewBaiduMap");
-                    intent = new Intent(Intent.ACTION_VIEW, uri);
-                    break;
+//                case R.id.menu7:
+//
+//
+//                    uri = Uri.parse("http://vc1818.88ip.org:8091/gpsData/viewBaiduMap");
+//                    intent = new Intent(Intent.ACTION_VIEW, uri);
+//                    break;
                 case R.id.menu8:
 
                     if (!Common.workId.contains("M"))
