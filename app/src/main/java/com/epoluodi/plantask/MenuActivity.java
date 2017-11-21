@@ -1,13 +1,19 @@
 package com.epoluodi.plantask;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
 
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -28,6 +34,11 @@ public class MenuActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        TelephonyManager tm = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+        Common.deviceId = tm.getDeviceId();
+
+
         setContentView(R.layout.activity_menu);
 
         menu1 = (RelativeLayout)findViewById(R.id.menu1);
@@ -53,6 +64,19 @@ public class MenuActivity extends Activity {
         menu8.setOnClickListener(onClickListener);
         menu9.setOnClickListener(onClickListener);
         menu10.setOnClickListener(onClickListener);
+
+
+        if (Build.VERSION.SDK_INT>23) {
+            if (this.checkSelfPermission(Manifest.permission.CAMERA)
+                    == PackageManager.PERMISSION_GRANTED)
+            {}
+            else
+            {
+//                this.shouldShowRequestPermissionRationale(Manifest.permission.CAMERA);
+                this.requestPermissions(new String[]{Manifest.permission.CAMERA},1);
+            }
+        }
+
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -225,6 +249,29 @@ public class MenuActivity extends Activity {
             startActivity(intent);
         }
     };
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case 1: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted, yay! Do the
+                    // contacts-related task you need to do.
+
+                } else {
+                    Toast.makeText(MenuActivity.this,"你无法使用扫码功能",Toast.LENGTH_SHORT).show();
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                }
+                return;
+            }
+        }
+    }
 
 
 }

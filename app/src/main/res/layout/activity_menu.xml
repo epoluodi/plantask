@@ -274,36 +274,7 @@
                 </RelativeLayout>
 
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center_horizontal"
-                    android:clickable="true"
-                    android:id="@+id/menu8"
 
-                    >
-                    <ImageView
-                        android:padding="8dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_margin="8dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/img8"
-
-
-                        android:src="@drawable/menu8" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_below="@+id/img8"
-                        android:text="签名管理"
-                        android:textColor="@color/black"
-
-                        />
-
-                </RelativeLayout>
 
 
                 <RelativeLayout
@@ -336,7 +307,37 @@
 
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:clickable="true"
+                    android:id="@+id/menu8"
 
+                    >
+                    <ImageView
+                        android:padding="8dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/img8"
+
+
+                        android:src="@drawable/menu8" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/img8"
+                        android:text="签名管理"
+                        android:textColor="@color/black"
+
+                        />
+
+                </RelativeLayout>
 
 
             </LinearLayout>

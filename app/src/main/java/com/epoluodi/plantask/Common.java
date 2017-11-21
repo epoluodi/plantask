@@ -2,6 +2,7 @@ package com.epoluodi.plantask;
 
 import android.app.NotificationManager;
 import android.content.Context;
+import android.os.Build;
 import android.os.Environment;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -32,11 +33,11 @@ public class Common {
     public static String userName;
     public static String workId;
 
-    public static String deviceId=android.os.Build.SERIAL;
+    public static String deviceId= Build.SERIAL;
 
     public final static Object olock = new Object();
 //"http://192.168.0.10:9229/"
-    public static String ServerWCF ="http://vc1818.88ip.org:9229/";
+    public static String ServerWCF = "http://vc1818.88ip.org:9229/";
     public static Context Appcontext;
     //popwindows方法
     static PopupWindow popupWindow;
